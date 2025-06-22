@@ -5,30 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>converse</title>
     <link rel="stylesheet" href="style.css">
-
+    <style>
+      .page-section { display: none; }
+      .active { display: block; }
+    </style>
 </head>
 
 <body>
-    <div style=" position: relative; display: inline-block;">
+    <!-- Page 1 -->
+    <div id="page1" class="page-section active">
         <img src="images/blurred phone camera photo.png" alt="camera" id="camera">
-        <a href="page2.html"
-            title="take a photo"
-            style="
-                position: absolute;
-                left: 28vw;   /* 30% of viewport width from the left */
-                top: 10vh;    /* 10% of viewport height from the top */
-                width: 40vw;  /* 50% of viewport width */
-                height: 70vh; /* 40% of viewport height */
-                display: block;
-                background: rgba(218, 151, 151, 0);
-                z-index: 2;
-            ">
-         </a>
-      </div>
+        <a href="#" onclick="showPage('page2'); return false;"
+           style="position: absolute; left: 28vw; top: 10vh; width: 40vw; height: 70vh; display: block; background: rgba(218, 151, 151, 0); z-index: 2;">
+        </a>
+    </div>
 
-                
+    <!-- Page 2 -->
+    <div id="page2" class="page-section">
+        <img src="images/unblurred phone camera photo.png" alt="camera" id="camera">
+        <a href="#" onclick="showPage('page3'); return false;"
+           style="position: absolute; left: 87vw; top: 40vh; width: 10vw; height: 20vh; display: block; background: rgba(255, 255, 255, 0); z-index: 2;">
+        </a>
+    </div>
 
+    <!-- Page 3 -->
+    <div id="page3" class="page-section">
+        <img src="images/full unblurred photo.png" alt="camera" id="camera">
+        <a href="#" onclick="showPage('page4'); return false;" class="overlay-link"
+           style="left: 62vw; top: 15vh; width: 18vw; height: 60vh;"></a>
+        <a href="#" onclick="showPage('page5'); return false;" class="overlay-link"
+           style="left: 45vw; top: 20vh; width: 15vw; height: 60vh;"></a>
+        <a href="#" onclick="showPage('page6'); return false;" class="overlay-link"
+           style="left: 20vw; top: 20vh; width: 20vw; height: 60vh;"></a>
+    </div>
 
-    
+     <!-- Page 4 -->
+    <div id="page4" class="page-section" style="background: rgb(255, 255, 255); width:100vw; height:100vh;">
+        <h1> This is page 4</h1>
+        
+    </div>
+
+    <!-- Page 5 -->
+    <div id="page5" class="page-section" style="background: rgb(255, 255, 255); width:100vw; height:100vh;">
+        <h1> This is page 5 </h1>
+    </div>
+
+    <!-- Page 6 -->
+    <div id="page6" class="page-section" style="background: rgb(255, 255, 255); width:100vw; height:100vh;">
+        <h1> This is page 6 </h1>
+    </div>
+
+    <!-- Add more pages as needed -->
+
+    <script>
+      function showPage(pageId) {
+        document.querySelectorAll('.page-section').forEach(function(div) {
+          div.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+      }
+    </script>
 </body>
 </html>
