@@ -5,34 +5,55 @@ html, body {
   overflow: hidden
 }
 
-#camera{
-  width: 100vq;
-  height: 100vh;
-  object-fit:cover;
-  display:block;
+center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 h1 {
   position: absolute;
-  top: 42vw;
-  left: 42vw;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  font-size: 24px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  top: 90%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  color: #ffffff;
+  margin: 0;
   z-index: 10;
 }
 
 h2 {
   position: absolute;
-  top: 5vw;
-  left: 40vw;
+  top: 20%;
+  left: 45%;
+  transform: translate(-50%, -50%);
   color: white;
   font-family: 'Arial', sans-serif;
   font-size: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin: 0;
   z-index: 10;
 }
+
+#camera {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
 
 .overlay-link {
   position: absolute;
