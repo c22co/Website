@@ -14,11 +14,22 @@ html, body {
 
 h1 {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 42vw;
+  left: 42vw;
   color: white;
   font-family: 'Arial', sans-serif;
   font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+h2 {
+  position: absolute;
+  top: 5vw;
+  left: 40vw;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   z-index: 10;
 }
@@ -29,11 +40,6 @@ h1 {
   background: rgba(255,255,255,0); /* transparent */
   z-index: 2;
   /* Default size, can be overridden by inline style or media queries */
-}
-
-/* Default for desktop/laptop */
-.overlay-link {
-  /* No changes needed if you like the desktop look */
 }
 
 /* Adjust for phones */
@@ -50,4 +56,89 @@ h1 {
     width: 90vw !important;
     /* ...etc */
   }
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #273a5b;
+  color: #ffffff;
+  border: 2px solid #301762;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+button:hover {
+  background-color: #963c3c;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#page3.active {
+  animation: fadeInPage 0.7s ease;
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: rotate(-90deg); }
+  to { opacity: 1; transform: rotate(1); }
+}
+
+@keyframes mySlide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+#box1 {
+  position: relative;
+  top: 60vh;
+  left: 1vw;
+  width: 35vw;
+  height: 12vw;
+  background-color: rgba(255, 245, 157, 1);
+  padding: 2vw; /* Add some padding for inner spacing */
+  box-sizing: border-box;
+  z-index: 10; /* Ensure it appears above other elements */
+
+  animation: mySlide 0.5s ease-in-out;
+  animation-duration: 1s;
+}
+
+h3 {
+  position: relative; /* Add this line */
+  color: rgb(214, 144, 23);
+  font-family: 'Brush Script MT', cursive;
+  font-size: 85px;
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+#Jewerly {
+  position: absolute;
+  top: 0;
+  left: 25vw;
+  height: 30vw;
+  z-index: 6;
+}
+
+#Guitar {
+  position: absolute;
+  top: 0vw;
+  left: 0vw;
+  height: 30vw;
+  z-index: 6;
+}
+
+#Plane {
+  position: absolute;
+  top: 0vw;
+  left: 50vw;
+  height: 30vw;
+  z-index: 6;
 }

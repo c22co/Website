@@ -18,19 +18,21 @@
         <a href="#" onclick="showPage('page2'); return false;"
            style="position: absolute; left: 28vw; top: 10vh; width: 40vw; height: 70vh; display: block; background: rgba(218, 151, 151, 0); z-index: 2;">
         </a>
+        <h1> click to focus </h1>
     </div>
 
     <!-- Page 2 -->
     <div id="page2" class="page-section">
-        <img src="images/unblurred phone camera photo.png" alt="camera" id="camera">
+        <img src="images/unblurred camera blinking.png" alt="camera" id="camera">
         <a href="#" onclick="showPage('page3'); return false;"
            style="position: absolute; left: 87vw; top: 40vh; width: 10vw; height: 20vh; display: block; background: rgba(255, 255, 255, 0); z-index: 2;">
         </a>
+        <h2> Great! Now take a photo </h2>
     </div>
 
     <!-- Page 3 -->
     <div id="page3" class="page-section">
-        <img src="images/full unblurred photo.png" alt="camera" id="camera">
+        <img src="images/unblurred camera full blinking.png" alt="camera" id="camera">
         <a href="#" onclick="showPage('page4'); return false;" class="overlay-link"
            style="left: 62vw; top: 15vh; width: 18vw; height: 60vh;"></a>
         <a href="#" onclick="showPage('page5'); return false;" class="overlay-link"
@@ -39,20 +41,37 @@
            style="left: 20vw; top: 20vh; width: 20vw; height: 60vh;"></a>
     </div>
 
-     <!-- Page 4 -->
-    <div id="page4" class="page-section" style="background: rgb(255, 255, 255); width:100vw; height:100vh;">
-        <h1> This is page 4</h1>
+     <!-- Page 4/ Eva-->
+    <div id="page4" class="page-section" style="background: rgb(213, 167, 50); width:100vw; height:100vh;">
+        <div id ="box1">
+             <h3> Eva Barnard </h3>
+        </div>
+
+        <div id="Guitar">
+            <img src="images/rockstar made.jfif" alt="Eva Barnard" id="eva" style="width: 40vw; height: 60vw;">
+        </div>
+
+        <div id="Jewerly">
+            <img src="images/Eva_Jewerly-removebg-preview.png" alt="Eva Barnard" id="eva" style="width: 20vw; height: 40vw;">
+        </div>
+        <button onclick="showPage('page3')">Back to Page 3</button>
+
+        <div id="Plane">
+            <img src="" alt="Eva Barnard" id="eva" style="width: 20vw; height: 40vw;">
+        </div>
         
     </div>
 
-    <!-- Page 5 -->
+    <!-- Page 5/ Tas-->
     <div id="page5" class="page-section" style="background: rgb(255, 255, 255); width:100vw; height:100vh;">
         <h1> This is page 5 </h1>
+         <button onclick="showPage('page3')">Back to Page 3</button>
     </div>
 
-    <!-- Page 6 -->
-    <div id="page6" class="page-section" style="background: rgb(255, 255, 255); width:100vw; height:100vh;">
+    <!-- Page 6/ Bernice-->
+    <div id="page6" class="page-section" style="background: rgb(45, 156, 207); width:100vw; height:100vh;">
         <h1> This is page 6 </h1>
+        <button onclick="showPage('page3')">Back to Page 3</button>
     </div>
 
     <!-- Add more pages as needed -->
